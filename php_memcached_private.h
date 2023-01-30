@@ -49,10 +49,10 @@
 
 #ifdef PHP_WIN32
   #  if PHP_VERSION_ID >= 80000
-  #  include "php_stdint.h"
-#else
-# include "win32/php_stdint.h"
-#endif
+  #  include <stdint.h>
+  #else
+  # include "win32/php_stdint.h"
+  #endif
 #else
 /* Used to store the size of the block */
 #  if defined(HAVE_INTTYPES_H)
